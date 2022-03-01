@@ -17,6 +17,12 @@ app.get('/', async (req, res) => {
     posts:posts
   })
 });
+app.get('/posts/:id', async (req, res) => {
+  const post= await Post.findById(req.params.id)
+  res.render('singleposts',{
+    post
+  })
+});
 app.get('/about', (req, res) => {
   res.render('about')
 });
