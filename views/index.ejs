@@ -25,13 +25,14 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <% for(let i=0; i<posts.length; i++) { %>
         <div class="post-preview">
-          <a href="/posts/<%= posts[i]._id %>">
+          <a href="/posts/update/<%= posts[i]._id %>">
             <h2 class="post-title">
               <%= posts[i].title %>
             </h2>
             <h3 style="font-style:italic; font-family: 'Gill Sans Extrabold', sans-serif;" class="post-subtitle mt-4">
               <%= posts[i].detail %>
             </h3>
+            <a href="/posts/<%= posts[i]._id %>?_method=DELETE" class="btn btn-danger">DELETE</a>
           </a>
 
       
